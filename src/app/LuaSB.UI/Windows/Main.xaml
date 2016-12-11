@@ -1,0 +1,8 @@
+﻿<Window x:Class="LuaSB.UI.Windows.Main"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Start" Width="640" Height="480" xmlns:my="clr-namespace:LuaSB.UI.Panes.Start">
+    <Grid>
+        <my:Start HorizontalAlignment="Left" Margin="56,112,0,0" x:Name="start1" VerticalAlignment="Top" />
+    </Grid>
+</Window>
