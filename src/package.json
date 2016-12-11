@@ -1,0 +1,29 @@
+{
+  "name": "luasb",
+  "version": "0.0.1",
+  "description": "LuaSB Storyboard generator",
+  "main": "main.js",
+  "scripts": {
+    "test": "electron .",
+    "start": "electron ."
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+ssh://git@github.com/Kagurame/LuaSB.git"
+  },
+  "keywords": [
+    "lua",
+    "sb",
+    "storyboard",
+    "osu"
+  ],
+  "author": "Kagu-chan",
+  "license": "GPL-3.0",
+  "bugs": {
+    "url": "https://github.com/Kagurame/LuaSB/issues"
+  },
+  "homepage": "https://github.com/Kagurame/LuaSB#readme",
+  "devDependencies": {
+    "electron": "^1.4.1"
+  }
+}
