@@ -27,3 +27,19 @@
   * Modify Presets
   * Rename Presets
   * Delete Presets
+* FXSpindle (Not included by default)
+  * Download FXSpindle Code
+  * Update FXSpindle Code
+  * Remove FXSpindle Code
+  * View Docs
+* ext.osb (Story-Board Library)
+  * Update ext.osb
+  * View Docs
+* Lua
+  * View Docs
+    * Lightweigth browser showing https://www.lua.org
+    * Links on this page not based on this domain opens the browser
+    * (Nice to Have) Cache visited pages for offline usage
+    * (Nice to Have) Update all cached pages
+* MarkDown viewer
+  * To show docs
