@@ -2,7 +2,8 @@
 <html>
   <head>
     <script>
-      const i18n = require('electron').remote.getGlobal('i18n');
+      require('app-module-path').addPath(`${__dirname}/../js/modules/`);
+      require('renderer').load();
     </script>
     <meta charset="UTF-8">
     <title>Hello World</title>

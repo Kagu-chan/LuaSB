@@ -33,6 +33,7 @@
   },
   "dependencies": {
     "app-module-path": "^2.1.0",
-    "i18n": "^0.8.3"
+    "i18n": "^0.8.3",
+    "lodash": "^4.17.2"
   }
 }
