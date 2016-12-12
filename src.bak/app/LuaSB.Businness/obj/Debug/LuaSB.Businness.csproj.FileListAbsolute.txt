@@ -1,4 +1,0 @@
-F:\Projects\LuaSB\src\app\LuaSB.Businness\bin\Debug\LuaSB.Businness.dll
-F:\Projects\LuaSB\src\app\LuaSB.Businness\bin\Debug\LuaSB.Businness.pdb
-F:\Projects\LuaSB\src\app\LuaSB.Businness\obj\Debug\LuaSB.Businness.dll
-F:\Projects\LuaSB\src\app\LuaSB.Businness\obj\Debug\LuaSB.Businness.pdb
