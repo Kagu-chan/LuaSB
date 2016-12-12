@@ -1,7 +1,5 @@
-import Globals from '../../globals';
-
+const environment = require('environment');
 const electron = require('electron');
-const path = require('path');
 const url = require('url');
 
 const app = electron.app;
@@ -12,29 +10,29 @@ let mainWindow;
 function createWindow() {
   mainWindow = new BrowserWindow({ width: 1024, height: 720 });
   mainWindow.loadURL(url.format({
-    pathname: Globals.startModule,
+    pathname: environment.startModule,
     protocol: 'file:',
-    slashes: true
+    slashes: true,
   }));
-  mainWindow.on('closed', function () {
+  mainWindow.on('closed', () => {
     mainWindow = null;
   });
 }
 
-function registerAppEvents() {
+function start() {
   app.on('ready', createWindow);
-  app.on('window-all-closed', function () {
+  app.on('window-all-closed', () => {
     if (process.platform !== 'darwin') {
-        app.quit();
+      app.quit();
     }
   });
-  app.on('activate', function () {
+  app.on('activate', () => {
     if (mainWindow === null) {
-        createWindow();
+      createWindow();
     }
   });
 }
 
-export default class Electron {
-  static registerAppEvents() { return registerAppEvents(); }
-}
+module.exports = {
+  start,
+};

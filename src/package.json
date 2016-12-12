@@ -2,12 +2,11 @@
   "name": "luasb",
   "version": "0.0.1",
   "description": "LuaSB Storyboard generator",
-  "main": "app/build/app.js",
+  "main": "app/js/app.js",
   "scripts": {
-    "test": "tsc && electron .",
-    "start": "electron .",
-    "tsc": "tsc",
-    "tsc:w": "tsc -w"
+    "lint": "eslint .",
+    "test": "electron .",
+    "start": "electron ."
   },
   "repository": {
     "type": "git",
@@ -27,7 +26,10 @@
   "homepage": "https://github.com/Kagurame/LuaSB#readme",
   "devDependencies": {
     "electron": "^1.4.1",
-    "typescript": "^2.1.4"
+    "eslint": "^2.2.0",
+    "eslint-plugin-react": "^4.2.3",
+    "eslint-config-airbnb": "^6.0.1",
+    "typings": "^2.0.0"
   },
   "dependencies": {
     "app-module-path": "^2.1.0"

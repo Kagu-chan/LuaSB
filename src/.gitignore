@@ -1,0 +1,16 @@
+## vscode
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+## electron
+#directories
+bower_components
+node_modules
+dist
+
+#files
+*.tgz
+*.log
