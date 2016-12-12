@@ -1,0 +1,17 @@
+{
+    "compilerOptions": {
+        "target": "ES5",
+        "module": "commonjs",
+        "removeComments": true,
+        "emitDecoratorMetadata": true,
+        "experimentalDecorators": true,
+        "sourceMap": false,
+        "outDir": "app/build/"
+    },
+    "exclude": [
+        "app",
+        "app.bak",
+        "ts.bak",
+        "node_modules"
+    ]
+}
