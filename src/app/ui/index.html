@@ -1,11 +1,15 @@
 <!DOCTYPE html>
-</html lang="en">
+<html lang="en" ng-app="LuaSB" ng-controller="mainController">
   <head>
     <script>
-      const remote = require('electron').remote;
+      require('angular');
+      require('./app');
+      require('./controllers');
     </script>
+    <meta charset="utf-8">
+    <title>{{title}}</title>
   </head>
   <body>
-    Hello World
+    <p>Nothing here {{'yet' + '!'}} {{ title }}</p>
   </body>
 </html>
