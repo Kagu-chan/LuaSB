@@ -1,3 +1,6 @@
 {
+  "app": {
+    "name": "LuaSB"
+  },
   "hello": "Hallo Welt"
 }
