@@ -1,18 +1,23 @@
 const environment = require('environment');
 const electron = require('electron');
 const url = require('url');
+const renderer = require('modules/pageRenderer');
 
 const app = electron.app;
 const BrowserWindow = electron.BrowserWindow;
 
 let mainWindow;
 
-function createWindow() {
+function configureLanguage() {
   i18n.setLocale(app.getLocale());
+}
+
+function createWindow() {
+  let template = renderer.render(environment.startModule);
 
   mainWindow = new BrowserWindow({ width: 1024, height: 720 });
   mainWindow.loadURL(url.format({
-    pathname: environment.startModule,
+    pathname: `${environment.viewPath}/main.html`, // `text/html;charset=utf-8,${template}`,
     protocol: 'file:',
     slashes: true,
   }));
@@ -36,5 +41,6 @@ function start() {
 }
 
 module.exports = {
+  configureLanguage,
   start,
 };

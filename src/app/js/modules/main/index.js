@@ -9,6 +9,7 @@ module.exports = {
       directory: environment.locales,
       register: global
     });
+    electronStarter.configureLanguage();
   },
   run: () => electronStarter.start(),
 };

@@ -6,7 +6,8 @@ const locales = `${base}/locales`;
 const availableLocals = ['en', 'de', 'ja'];
 const defaultLocal = 'en';
 const viewPath = `${base}/view`;
-const startModule = `${viewPath}/main.html`;
+const pagesPrefix = 'pages';
+const startModule = `home`;
 
 module.exports = {
   base,
@@ -15,5 +16,6 @@ module.exports = {
   availableLocals,
   defaultLocal,
   viewPath,
+  pagesPrefix,
   startModule,
 };
