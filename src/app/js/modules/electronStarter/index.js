@@ -10,12 +10,23 @@ let mainWindow;
 function createWindow() {
   i18n.setLocale(app.getLocale());
 
-  mainWindow = new BrowserWindow({ width: 1024, height: 720 });
+  mainWindow = new BrowserWindow({
+    width: 1024,
+    height: 720,
+    show: false,
+    backgroundColor: '#2e2c29',
+    // TODO: Comment in for release builds!
+    // webPreferences: {
+    //   devTools: false
+    // }
+  });
+  mainWindow.maximize();
   mainWindow.loadURL(url.format({
     pathname: environment.startModule,
     protocol: 'file:',
     slashes: true,
   }));
+  mainWindow.on('ready-to-show', () => mainWindow.show());
   mainWindow.on('closed', () => {
     mainWindow = null;
   });
