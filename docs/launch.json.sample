@@ -1,0 +1,26 @@
+{
+  // Use IntelliSense to learn about possible Node.js debug attributes.
+  // Hover to view descriptions of existing attributes.
+  // For more information, visit: https://go.microsoft.com/fwlink/?linkid=830387
+  // Please save at .vscode/launch.json and fix runtimeExecutable parameter
+  "version": "0.2.0",
+  "configurations": [
+    {
+      "type": "node",
+      "request": "launch",
+      "name": "Start",
+      "program": "${workspaceRoot}\\src\\app\\index.js",
+      "cwd": "${workspaceRoot}",
+      "runtimeExecutable": "${workspaceRoot}\\src\\node_modules\\.bin\\electron.cmd",
+      "runtimeArgs": [
+        "--enable-logging"
+      ]
+    },
+    {
+      "type": "node",
+      "request": "attach",
+      "name": "Attach",
+      "port": 5858
+    }
+  ]
+}
