@@ -8,6 +8,8 @@ const BrowserWindow = electron.BrowserWindow;
 let mainWindow;
 
 function createWindow() {
+  i18n.setLocale(app.getLocale());
+
   mainWindow = new BrowserWindow({ width: 1024, height: 720 });
   mainWindow.loadURL(url.format({
     pathname: environment.startModule,

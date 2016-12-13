@@ -4,11 +4,11 @@ const electronStarter = require('modules/electronStarter');
 module.exports = {
   configure: () => {
     i18n.configure({
-      locales: ['en', 'de', 'jp'],
-      defaultLocale: 'de',
+      locales: environment.availableLocals,
+      defaultLocale: environment.defaultLocale,
       directory: environment.locales,
+      register: global
     });
-    i18n.init();
   },
   run: () => electronStarter.start(),
 };
