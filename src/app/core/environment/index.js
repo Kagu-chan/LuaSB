@@ -18,6 +18,12 @@ const runner = `${ui}/index.html`;
 const startupParams = {
   width: 1024,
   height: 720,
+  show: false,
+  backgroundColor: '#2e2c29',
+  // TODO: Comment in for release builds!
+  // webPreferences: {
+  //   devTools: false
+  // }
 };
 
 let mainWindow;
@@ -29,6 +35,8 @@ const createAppWindow = () => {
     protocol: 'file:',
     slashes: true,
   }));
+  mainWindow.maximize();
+  mainWindow.on('ready-to-show', mainWindow.show);
   mainWindow.on('closed', () => mainWindow = null);
 };
 
