@@ -1,4 +1,4 @@
-const {app, BrowserWindow} = require('electron');
+const { app, BrowserWindow } = require('electron');
 const url = require('url');
 
 const base = `${__dirname}/../..`;
@@ -9,7 +9,7 @@ const localization = {
   locales: ['en', 'de', 'ja'],
   defaultLocale: 'en',
   api: {
-    '__': 't',
+    __: 't',
   },
   register: global,
 };
@@ -37,12 +37,12 @@ const createAppWindow = () => {
   }));
   mainWindow.maximize();
   mainWindow.on('ready-to-show', mainWindow.show);
-  mainWindow.on('closed', () => mainWindow = null);
+  mainWindow.on('closed', () => (mainWindow = null));
 };
 
 const registerAppEvents = () => {
-  app.on('window-all-closed', () => (process.platform !== 'darwin') ? app.quit() : null);
-  app.on('activate', () => (mainWindow === null) ? createAppWindow() : null);
+  app.on('window-all-closed', () => ((process.platform !== 'darwin') ? app.quit() : null));
+  app.on('activate', () => ((mainWindow === null) ? createAppWindow() : null));
   app.on('ready', createAppWindow);
 };
 
@@ -52,5 +52,5 @@ module.exports = {
   ui,
   localization,
   appLocale,
-  registerAppEvents
+  registerAppEvents,
 };
