@@ -8,6 +8,7 @@ const localization = {
   directory: `${base}/locales`,
   locales: ['en', 'de', 'ja'],
   defaultLocale: 'en',
+  objectNotation: true,
   api: {
     __: 't',
   },

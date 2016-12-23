@@ -5,6 +5,7 @@
     "no-param-reassign": [2, { "props": false }]
   },
   "globals": {
-    "angular": false
+    "angular": false,
+    "i18n": false
   }
 }

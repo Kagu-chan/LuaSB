@@ -1,15 +1,17 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="LuaSB" ng-controller="mainController">
+<html lang="en" ng-app="LuaSB">
   <head>
-    <script>
-      require('angular');
-      require('./app');
-      require('./controllers');
-    </script>
     <meta charset="utf-8">
-    <title>{{title}}</title>
+    <title>{{ 'app.name' | i18n }}</title>
   </head>
   <body>
     <p>Nothing here {{'yet' + '!'}} {{ title }}</p>
+
+    <script>
+      require('angular');
+      require('./app');
+      require('./filters');
+      require('./controllers');
+    </script>
   </body>
 </html>
