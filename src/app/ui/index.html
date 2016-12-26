@@ -12,11 +12,16 @@
       let _, app, Promise, fs;
 
       require('angular');
+      require('angular-animate');
+      require('angular-touch');
+      require('angular-bootstrap');
       _ = require('lodash');
       Promise = require('bluebird');
       fs = require('fs.promised/promisify')(Promise);
 
-      app = angular.module('LuaSB', []);
+      app = angular.module('LuaSB', [
+        'ui.bootstrap'
+      ]);
       Promise.all([
         require('./services'),
         require('./filters'),
