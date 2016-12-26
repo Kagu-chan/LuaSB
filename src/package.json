@@ -26,6 +26,7 @@
   },
   "homepage": "https://github.com/Kagurame/LuaSB#readme",
   "devDependencies": {
+    "bootstrap-sass": "^3.3.7",
     "electron": "^1.4.1",
     "eslint": "^2.2.0",
     "eslint-config-airbnb": "^6.0.1",
@@ -34,7 +35,9 @@
     "typings": "^2.0.0"
   },
   "dependencies": {
-    "angular": "^1.6.0",
+    "angular": "^1.6.1",
+    "angular-animate": "^1.6.1",
+    "angular-touch": "^1.6.1",
     "bluebird": "^3.4.7",
     "fs.promised": "^3.0.0",
     "i18n": "^0.8.3",
