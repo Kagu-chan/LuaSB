@@ -3,10 +3,10 @@
     "name": "LuaSB"
   },
 	"navigation": {
-		"projects": "Projekte",
-		"presets": "Projekt-Templates",
-		"snippets": "Skript-Snippets",
-		"modules": "Module",
-		"plugins": "Erweiterungen"
+		"projects": "プロジェクト",
+		"presets": "テンプレート",
+		"snippets": "スニペット",
+		"modules": "モデュール",
+		"plugins": "拡張機能"
 	}
 }
