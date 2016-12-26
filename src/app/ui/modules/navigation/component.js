@@ -3,6 +3,6 @@ app
     bindings: {
       items: '=',
     },
-    templateUrl: (AppService) => AppService.templateUrl('test'),
+    templateUrl: (AppService) => AppService.templateUrl('navigation', 'main'),
     controller: 'NavigationController as $nav',
   });
