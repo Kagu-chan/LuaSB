@@ -3,5 +3,12 @@
   "extends": "airbnb/base",
   "rules": {
     "no-param-reassign": [2, { "props": false }]
+  },
+  "globals": {
+    "angular": false,
+    "i18n": false,
+    "app": false,
+    "_": false,
+    "fs": false
   }
 }

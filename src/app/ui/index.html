@@ -1,17 +1,28 @@
 <!DOCTYPE html>
-<html lang="en" ng-app="LuaSB">
+<html lang="en">
   <head>
     <meta charset="utf-8">
     <title>{{ 'app.name' | i18n }}</title>
   </head>
   <body>
-    <p>Nothing here {{'yet' + '!'}} {{ title }}</p>
-
+    <x-navigation test="Hello"></x-navigation>
     <script>
+      let _, app, Promise, fs;
+
       require('angular');
-      require('./app');
-      require('./filters');
-      require('./controllers');
+      _ = require('lodash');
+      Promise = require('bluebird');
+      fs = require('fs.promised/promisify')(Promise);
+
+      app = angular.module('LuaSB', []);
+      Promise.all([
+        require('./services'),
+        require('./filters'),
+        require('./modules'),
+      ])
+        .then(() => {
+          angular.element(document).ready(() => angular.bootstrap(document, ['LuaSB']));
+        });
     </script>
   </body>
 </html>
