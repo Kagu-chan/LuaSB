@@ -14,7 +14,6 @@ const localization = {
   },
   register: global,
 };
-const appLocale = app.getLocale();
 const runner = `${ui}/index.html`;
 const startupParams = {
   width: 1024,
@@ -30,6 +29,7 @@ const startupParams = {
 let mainWindow;
 
 const createAppWindow = () => {
+  i18n.setLocale(app.getLocale());
   mainWindow = new BrowserWindow(startupParams);
   mainWindow.loadURL(url.format({
     pathname: runner,
@@ -52,6 +52,5 @@ module.exports = {
   core,
   ui,
   localization,
-  appLocale,
   registerAppEvents,
 };
