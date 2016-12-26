@@ -1,7 +1,7 @@
 app
   .component('navigation', {
     bindings: {
-      test: '@',
+      items: '=',
     },
     templateUrl: (AppService) => AppService.templateUrl('test'),
     controller: 'NavigationController as $nav',

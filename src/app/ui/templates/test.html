@@ -1,1 +1,7 @@
 <div>TESTTEMPLATE</div>
+<div x-ng-repeat="item in items | orderBy: 'order'">
+  {{ item.label | i18n }}
+  <div style="padding-left: 12px;" x-ng-repeat="subitem in item.subitems | orderBy: 'title' | orderBy: '-lastUsed'">
+    {{ subitem.title }}
+  </div>
+</div>

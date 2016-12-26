@@ -2,5 +2,11 @@
   "app": {
     "name": "LuaSB"
   },
-  "hello": "Hello world"
+	"navigation": {
+		"projects": "Projetcs",
+		"presets": "Presets",
+		"snippets": "Snippets",
+		"modules": "Modules",
+		"plugins": "Plugins"
+	}
 }

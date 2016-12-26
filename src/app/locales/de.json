@@ -1,6 +1,12 @@
 {
-  "app": {
-    "name": "LuaSB"
-  },
-  "hello": "Hallo Welt"
+	"app": {
+		"name": "LuaSB"
+	},
+	"navigation": {
+		"projects": "Projekte",
+		"presets": "Projekt-Templates",
+		"snippets": "Skript-Snippets",
+		"modules": "Module",
+		"plugins": "Erweiterungen"
+	}
 }
