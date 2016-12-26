@@ -31,7 +31,6 @@
     "eslint-config-airbnb": "^6.0.1",
     "eslint-plugin-react": "^4.2.3",
     "node-sass": "^4.1.1",
-    "nodemon": "^1.11.0",
     "typings": "^2.0.0"
   },
   "dependencies": {
