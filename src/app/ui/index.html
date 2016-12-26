@@ -14,13 +14,14 @@
       require('angular');
       require('angular-animate');
       require('angular-touch');
-      require('angular-bootstrap');
+      require('angular-ui-bootstrap');
 
       _ = require('lodash');
       Promise = require('bluebird');
       fs = require('fs.promised/promisify')(Promise);
 
       app = angular.module('LuaSB', [
+        'ngAnimate',
         'ui.bootstrap'
       ]);
       Promise.all([

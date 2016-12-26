@@ -6,8 +6,8 @@
     "lint": "eslint .",
     "test": "electron --debug=5858 app",
     "start": "electron app",
-    "build": "node-sass --output-style compressed --source-map true --output app/ui/css app/ui/scss/main.scss",
-    "watch": "node-sass --watch --output-style compressed --source-map true --output app/ui/css app/ui/scss/main.scss"
+    "build": "node-sass --output-style compressed --source-map true --output app/ui/css app/ui/scss/main.sass",
+    "watch": "node-sass --watch --output-style compressed --source-map true --output app/ui/css app/ui/scss/main.sass"
   },
   "repository": {
     "type": "git",
@@ -38,6 +38,7 @@
     "angular-animate": "^1.6.1",
     "angular-bootstrap": "^0.12.2",
     "angular-touch": "^1.6.1",
+    "angular-ui-bootstrap": "^2.3.1",
     "bluebird": "^3.4.7",
     "bootstrap": "^3.3.7",
     "fs.promised": "^3.0.0",

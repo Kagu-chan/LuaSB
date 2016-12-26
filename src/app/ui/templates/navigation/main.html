@@ -1,6 +1,7 @@
-<div x-ng-repeat="item in items | orderBy: 'order'">
-  {{ item.label | i18n }}
-  <div style="padding-left: 12px;" x-ng-repeat="subitem in item.subitems | orderBy: 'title' | orderBy: '-lastUsed'">
-    {{ subitem.title }}
+<uib-accordion close-others="true" class="navigation">
+  <div uib-accordion-group class="panel-default" is-open="$first" heading="{{ item.label | i18n }}" ng-repeat="item in items | orderBy: 'order'">
+    <div id="{{ subitem.id }}" x-ng-repeat="subitem in item.subitems | orderBy: 'title' | orderBy: '-lastUsed'">
+      {{ subitem.title }}
+    </div>
   </div>
-</div>
+</uib-accordion>
