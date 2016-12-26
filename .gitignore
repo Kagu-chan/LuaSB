@@ -11,5 +11,8 @@ dist
 *.tgz
 *.log
 
-##npm
+## npm
 npm-debug.log
+
+## build
+css/
