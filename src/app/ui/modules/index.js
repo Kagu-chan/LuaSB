@@ -1,5 +1,8 @@
 const path = require('path');
 const cwd = __dirname;
+const _ = require('lodash');
+const Promise = require('bluebird');
+const fs = require('fs.promised/promisify')(Promise);
 
 module.exports = fs.readdir(cwd)
   .then(files => _.map(files, file => path.join(cwd, file)))

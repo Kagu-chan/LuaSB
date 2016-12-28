@@ -6,9 +6,6 @@
   },
   "globals": {
     "angular": false,
-    "i18n": false,
-    "app": false,
-    "_": false,
-    "fs": false
+    "app": false
   }
 }

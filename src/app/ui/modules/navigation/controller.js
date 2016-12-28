@@ -1,5 +1,5 @@
 app
-  .controller('NavigationController', ($scope, $timeout, ProjectsService) => {
+  .controller('NavigationController', ($scope, $timeout, ProjectsService, _) => {
     const lib = {
       lastHeight: null,
       fixHeight(element, isResize) {
