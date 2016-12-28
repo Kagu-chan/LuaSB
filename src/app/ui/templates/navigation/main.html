@@ -1,5 +1,5 @@
 <uib-accordion close-others="true" class="navigation">
-  <div uib-accordion-group class="panel-default" is-open="$first" heading="{{ item.label | i18n }}" ng-repeat="item in items | orderBy: 'order'">
+  <div uib-accordion-group class="panel-default" is-open="item.IsOpened" heading="{{ item.label | i18n }}" ng-repeat="item in items | orderBy: 'order'">
     <div id="{{ subitem.id }}" x-ng-repeat="subitem in item.subitems | orderBy: 'title' | orderBy: '-lastUsed'">
       {{ subitem.title }}
     </div>
