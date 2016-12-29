@@ -1,0 +1,16 @@
+{
+  "root": true,
+  "extends": "airbnb/base",
+  "rules": {
+    "no-param-reassign": [2, { "props": false }],
+    "func-names": 0
+  },
+  "globals": {
+    "describe": true,
+    "init": true,
+    "app": true,
+    "it": true,
+    "beforeEach": true,
+    "afterEach": true
+  }
+}

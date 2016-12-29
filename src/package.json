@@ -6,6 +6,7 @@
     "lint": "eslint .",
     "dev": "electron app --dev",
     "start": "electron app",
+    "test": "mocha tests/test.js",
     "build": "node-sass --output-style compressed --source-map true --output app/ui/css app/ui/scss/main.sass",
     "watch": "node-sass --watch --output-style compressed --source-map true --output app/ui/css app/ui/scss/main.sass"
   },
@@ -26,11 +27,15 @@
   },
   "homepage": "https://github.com/Kagurame/LuaSB#readme",
   "devDependencies": {
+    "chai": "^3.5.0",
+    "chai-as-promised": "^6.0.0",
     "electron": "^1.4.1",
     "eslint": "^2.2.0",
     "eslint-config-airbnb": "^6.0.1",
     "eslint-plugin-react": "^4.2.3",
+    "mocha": "^3.2.0",
     "node-sass": "^4.1.1",
+    "spectron": "^3.4.1",
     "typings": "^2.0.0"
   },
   "dependencies": {
