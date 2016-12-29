@@ -13,7 +13,9 @@
       "cwd": "${workspaceRoot}",
       "runtimeExecutable": "${workspaceRoot}\\src\\node_modules\\.bin\\electron.cmd",
       "runtimeArgs": [
-        "--enable-logging"
+        "--enable-logging",
+        "--dev",
+        "--tools"
       ]
     },
     {

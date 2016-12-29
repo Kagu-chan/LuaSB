@@ -1,5 +1,9 @@
 const { app, BrowserWindow } = require('electron');
 const url = require('url');
+const argv = require('yargs')
+  .default('dev', false)
+  .default('tools', false)
+  .argv;
 
 const base = `${__dirname}/../..`;
 const core = `${base}/core`;
@@ -20,15 +24,18 @@ const startupParams = {
   height: 720,
   show: false,
   backgroundColor: '#2e2c29',
-  // TODO: Comment in for release builds!
-  // webPreferences: {
-  //   devTools: false
-  // }
+  webPreferences: {
+    devTools: false,
+  },
 };
 
 let mainWindow;
 
 const createAppWindow = () => {
+  if (argv.dev) {
+    delete startupParams.webPreferences.devTools;
+  }
+
   i18n.setLocale(app.getLocale());
   mainWindow = new BrowserWindow(startupParams);
   mainWindow.loadURL(url.format({
@@ -39,6 +46,10 @@ const createAppWindow = () => {
   mainWindow.maximize();
   mainWindow.on('ready-to-show', mainWindow.show);
   mainWindow.on('closed', () => (mainWindow = null));
+
+  if (argv.tools) {
+    mainWindow.webContents.openDevTools();
+  }
 };
 
 const registerAppEvents = () => {

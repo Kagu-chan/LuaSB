@@ -4,7 +4,7 @@
   "description": "LuaSB Storyboard generator",
   "scripts": {
     "lint": "eslint .",
-    "test": "electron --debug=5858 app",
+    "dev": "electron app --dev",
     "start": "electron app",
     "build": "node-sass --output-style compressed --source-map true --output app/ui/css app/ui/scss/main.sass",
     "watch": "node-sass --watch --output-style compressed --source-map true --output app/ui/css app/ui/scss/main.sass"
@@ -40,7 +40,7 @@
     "angular-touch": "^1.6.1",
     "angular-ui-bootstrap": "^2.3.1",
     "bluebird": "^3.4.7",
-    "bootstrap": "^3.3.7",
+    "bootstrap-sass": "^3.3.7",
     "fs.promised": "^3.0.0",
     "i18n": "^0.8.3",
     "lodash": "^4.17.2"
