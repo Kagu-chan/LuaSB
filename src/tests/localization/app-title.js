@@ -6,13 +6,12 @@ module.exports = () => {
       Promise.resolve()
         .then(() => [
           app.client.waitUntilWindowLoaded().getTitle(),
-          app.remote,
+          app.client.execute(() => require('electron').remote.getGlobal('i18n')),
         ])
           .all()
-          .spread((title, locale) => {
-            console.log(locale);
-            return expect(title).to.equal(i18n.__({ phrase: 'app.name', locale }));
-          })
+          .spread((title, locale) =>
+            expect(title).to.equal(i18n.__({ phrase: 'app.name', locale: locale.value.locale }))
+          )
     );
   });
 };
