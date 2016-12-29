@@ -5,6 +5,8 @@ const path = require('path');
 const chai = require('chai');
 const chaiAsPromised = require('chai-as-promised');
 const _ = require('lodash');
+const i18n = require('i18n');
+const Promise = require('bluebird');
 
 let electronPath = path.join(__dirname, '..', 'node_modules', '.bin', 'electron');
 
@@ -31,10 +33,10 @@ global.init = (obj) => {
   beforeEach(() => app.start());
   afterEach(() => app.stop());
 };
-global.i18n = require('i18n');
-global.expect = require('chai').expect;
+global.i18n = i18n;
+global.expect = chai.expect;
 global._ = _;
-global.Promise = require('bluebird');
+global.Promise = Promise;
 
 _.each([
   'window',
