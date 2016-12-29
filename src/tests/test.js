@@ -31,6 +31,10 @@ global.init = (obj) => {
   beforeEach(() => app.start());
   afterEach(() => app.stop());
 };
+global.i18n = require('i18n');
+global.expect = require('chai').expect;
+global._ = _;
+global.Promise = require('bluebird');
 
 _.each([
   'window',

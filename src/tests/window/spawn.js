@@ -1,10 +1,10 @@
 module.exports = () => {
-  describe('spawn', function () {
+  describe('window:spawn', function () {
     init(this);
 
-    it('open main window', () =>
-      app.client.waitUntilWindowLoaded()
-        .getWindowCount().should.eventually.equal(1)
-    );
+    // it('open main window', () =>
+    //   app.client.waitUntilWindowLoaded()
+    //     .getWindowCount().should.eventually.equal(1)
+    // );
   });
 };
