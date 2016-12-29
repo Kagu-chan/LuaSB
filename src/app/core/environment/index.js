@@ -4,6 +4,7 @@ const argv = require('yargs')
   .default('dev', false)
   .default('tools', false)
   .argv;
+const storage = require('electron-json-storage');
 
 const base = `${__dirname}/../..`;
 const core = `${base}/core`;
@@ -36,7 +37,19 @@ const createAppWindow = () => {
     delete startupParams.webPreferences.devTools;
   }
 
-  i18n.setLocale(app.getLocale());
+  storage.get('usersettings', (error, data) => {
+    if (error) throw error;
+
+    if (data) {
+      i18n.setLocale(data.language);
+    } else {
+      storage.set('usersettings', { language: app.getLocale() }, (err) => {
+        if (err) throw err;
+      });
+      i18n.setLocale(app.getLocale());
+    }
+  });
+
   mainWindow = new BrowserWindow(startupParams);
   mainWindow.loadURL(url.format({
     pathname: runner,

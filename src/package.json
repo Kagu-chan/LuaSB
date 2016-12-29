@@ -46,6 +46,7 @@
     "angular-ui-bootstrap": "^2.3.1",
     "bluebird": "^3.4.7",
     "bootstrap-sass": "^3.3.7",
+    "electron-json-storage": "^2.1.0",
     "fs.promised": "^3.0.0",
     "i18n": "^0.8.3",
     "lodash": "^4.17.2"
