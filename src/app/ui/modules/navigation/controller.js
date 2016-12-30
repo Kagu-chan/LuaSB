@@ -25,6 +25,10 @@ app
           }
         });
 
+        if(typeof itemToFix === 'undefined') {
+          itemToFix = angular.element(angular.element(groups[0]).children()[1]);
+        }
+
         if (isResize || !lib.lastHeight) {
           accordionHeight = accordion[0].offsetHeight;
           panelGroupHeight = panelGroup[0].offsetHeight;
