@@ -25,7 +25,7 @@ app
           }
         });
 
-        if(typeof itemToFix === 'undefined') {
+        if (typeof itemToFix === 'undefined') {
           itemToFix = angular.element(angular.element(groups[0]).children()[1]);
         }
 
