@@ -23,9 +23,9 @@
   "author": "Kagu-chan",
   "license": "GPL-3.0",
   "bugs": {
-    "url": "https://github.com/Kagurame/LuaSB/issues"
+    "url": "http://tracker.kagu-chan.de/projects/luasb/issues"
   },
-  "homepage": "https://github.com/Kagurame/LuaSB#readme",
+  "homepage": "http://tracker.kagu-chan.de/projects/luasb",
   "devDependencies": {
     "chai": "^3.5.0",
     "chai-as-promised": "^6.0.0",
