@@ -15,4 +15,5 @@ dist
 npm-debug.log
 
 ## build
+build/
 css/
